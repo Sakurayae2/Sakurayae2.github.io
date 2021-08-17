@@ -48,7 +48,7 @@
   /*End of Initial Variables*/
   </script>
   <script type="text/javascript">
-  var bg = "https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.02/images/1.png,https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.02/images/3.png,https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.02/images/4.png,https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.02/images/5.png,https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.02/images/6.png,https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.02/images/7.png,https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.02/images/8.png".split(",");
+  var bg = "https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.02/images/1.png,https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.02/images/3.png,https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.02/images/4.png,https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.02/images/6.png,https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.02/images/7.png,https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.02/images/8.png".split(",");
   var bgindex = Math.floor(Math.random()*bg.length);
   if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
     alert('朋友，IE浏览器未适配哦~');
@@ -429,14 +429,14 @@
 
   <div class="post-thumb">
     <a href="/2021/08/17/hello-world/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/image-404.png">
+      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.02/images/7.png">
     </a>
   </div>
   <div class="post-content-wrap">
     <div class="post-content">
       <div class="post-date">
         <i class="iconfont icon-time">
-        </i>2021-8-17 14:08</div>
+        </i>2021-8-17 23:08</div>
       <a href="/2021/08/17/hello-world/" class="post-title">
         <h3>Hello World</h3>
       </a>
@@ -474,7 +474,7 @@
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="ins-section-wrapper">
@@ -486,10 +486,10 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: '文章',
-            // PAGES: '页面',
-            CATEGORIES: '分类',
-            TAGS: '标签',
+            POSTS: 'Posts',
+            // PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
         },
         ROOT_URL: '/',
         CONTENT_URL: '/content.json',
