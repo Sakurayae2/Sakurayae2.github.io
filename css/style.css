@@ -6,7 +6,7 @@
 }
 
 #veditor {
-    background-image: url(https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.02/images/9.png);
+    background-image: url(https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.06/images/f.gif);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
@@ -4522,7 +4522,7 @@ a.page-numbers {
 }
 
 .comment-respond textarea {
-    background-image: url('https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/comment-bg.png');
+    background-image: url(https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.02/images/8.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
@@ -5284,7 +5284,7 @@ i.iconfont.js-toggle-search.iconsearch {
     visibility: visible;
     opacity: .99;
     animation: elastic .5s;
-    background-image: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/iloli.gif);
+    background-image: url(https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.06/images/f.gif);
     background-repeat: no-repeat;
     background-position: bottom right
 }
@@ -9508,7 +9508,7 @@ img[src*="#in-center"] {
 #banner_wave_1 {
     width: auto;
     height: 65px;
-    background: url("https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wave1.png") repeat-x;
+    /* background: url("https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wave1.png") repeat-x; */
     position: absolute;
     bottom: 0;
     width: 400%;
@@ -9522,7 +9522,7 @@ img[src*="#in-center"] {
 #banner_wave_2 {
     width: auto;
     height: 80px;
-    background: url("https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wave2.png") repeat-x;
+    /* background: url("https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wave2.png") repeat-x; */
     position: absolute;
     bottom: 0;
     width: 400%;
