@@ -3285,7 +3285,7 @@ h1.page-title.mb- {
 }
 
 .author-profile .meta .title {
-    display: none
+    display: display
 }
 
 .author-profile p {
