@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Vue学习笔记 | SakuraGin の blog</title>
+  <title itemprop="name">前端面试题 | SakuraGin の blog</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -48,7 +48,7 @@
   /*End of Initial Variables*/
   </script>
   <script type="text/javascript">
-  var bg = "https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/14.png,https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/7.png,https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/8.png,https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/10.png".split(",");
+  var bg = "https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/14.png,https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/7.png,https://cdn.jsdelivr.net/gh/Sakurayae2/cdn/images/16.png,https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/10.png,https://cdn.jsdelivr.net/gh/Sakurayae2/cdn/images/23.png".split(",");
   var bgindex = Math.floor(Math.random()*bg.length);
   if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
     alert('朋友，IE浏览器未适配哦~');
@@ -75,11 +75,11 @@
     <div class="focusinfo no-select">
       <div class="header-tou">
         <a href="https://sakurayae2.github.io">
-          <img src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/10.jpg">
+          <img src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn/images/10.jpg">
         </a>
       </div>
       <div class="header-info">
-        <p>种一棵树的最佳时间是十年前,其次是现在!</p>
+        <p>种一棵树的最佳时间是十年前,其次是现在！</p>
         <div class="top-social_v2">
           <li id="bg-pre">
             <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
@@ -89,7 +89,7 @@
               
                 <li>
                   <a href="https://github.com/Sakurayae2" target="_blank" class="social-github" title="github">
-                    <img src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/GitHub.png">
+                    <img src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn/images/GitHub.png">
                   </a>
                 </li>
               
@@ -97,7 +97,7 @@
               
                 <li>
                   <a href="https://space.bilibili.com/266986404" target="_blank" class="social-github" title="bilibili">
-                    <img src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/bilibili.png">
+                    <img src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn/images/bili.png">
                   </a>
                 </li>
               
@@ -105,7 +105,7 @@
               
                 <li>
                   <a href="https://music.163.com/#/my/m/music/playlist?id=887435773" target="_blank" class="social-github" title="wyy">
-                    <img src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/wangyiyun.png">
+                    <img src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn/images/wyy.jpg">
                   </a>
                 </li>
               
@@ -209,7 +209,7 @@
                       <li>
                         <a href="/categories/Essays">
                           <i class="fa fa-commenting-o" aria-hidden="true"></i>
-                          随想
+                          随笔
                         </a>
                       </li>
                     
@@ -334,12 +334,12 @@
 
 <div class="pattern-center single-center">
   <!-- 有配图默认渲染第一张 -->
-  <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/13.png);"
-    src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/13.png">
+  <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/14.png);"
+    src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/14.png">
   </div>
   <header class="pattern-header single-header">
     <h1 class="entry-title">
-      Vue学习笔记</h1>
+      前端面试题</h1>
     <p class="entry-census">
       <span>
         <a href="">
@@ -366,62 +366,26 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的 <strong><font color="red">渐进式</font></strong> 框架，所谓渐进式就是逐步实现新特性的意思，如实现模块化开发、路由、状态管理等新特性。其特点是综合了Angular (模块化)和React (虚拟DOM)的优点。<br>Vue被设计为可以 <strong><font color="blue">自底向上逐层应用</font></strong> ,Vue的核心库只关注 <strong><font color="yellowgreen">视图层</strong></font> ，不仅易于上手，还便于与第三方库(如: vue-router: 跳转，vue-resource: 通信，vuex:管理)或既有项目整合。</p>
-<h3 id="声明式渲染"><a href="#声明式渲染" class="headerlink" title="声明式渲染"></a>声明式渲染</h3><p>Vue.js的核心是一个允许采用简洁的模板语法来声明式地将数据渲染进DOM的系统：</p>
-<pre><code class="html">&lt;div id=&quot;counter&quot;&gt;
-    Counter: &#123;&#123; counter &#125;&#125;
-&lt;/div&gt;
-</code></pre>
-<pre><code class="javascript">#counter property每秒递增
-
-const Counter = &#123;
-    data() &#123;
-        return &#123;
-            Counter: 0
-        &#125;
-    &#125;,
-    mounted() &#123;
-        setInterval(() =&gt; &#123;
-            this.counter++
-        &#125;, 1000)
-    &#125;
-&#125;
-
-Vue.createApp(Counter).mount(&#39;#counter&#39;)
-</code></pre>
-<ul>
-<li>Counter: 0 (1,2,…)</li>
+          <h1 id="1-浏览器篇"><a href="#1-浏览器篇" class="headerlink" title="1.浏览器篇"></a>1.浏览器篇</h1><h2 id="1-1-列举一下常用浏览器及其内核"><a href="#1-1-列举一下常用浏览器及其内核" class="headerlink" title="1.1.列举一下常用浏览器及其内核"></a>1.1.列举一下常用浏览器及其内核</h2><ul>
+<li>IE :                Trident内核</li>
+<li>Chrome、safari :    WebKit内核</li>
+<li>Firefox :           Gecko内核</li>
+<li>Opera :             Presto内核</li>
 </ul>
-<h3 id="处理用户输入"><a href="#处理用户输入" class="headerlink" title="处理用户输入"></a>处理用户输入</h3><p>为了让用户和应用进行交互，我们可以用 <em><strong><font color="red">v-on</font></strong></em> 指令添加一个事件监听器，通过它调用在实例中定义的方法：</p>
-<pre><code class="html">&lt;div id=&quot;event-handling&quot;&gt;
-    &lt;p&gt;&#123;&#123;message&#125;&#125;&lt;/p&gt;
-    &lt;button v-on:click=&quot;reverseMessage&quot;&gt;反转 message&lt;/button&gt;
-&lt;/div&gt;
-</code></pre>
-<pre><code class="javascript">const EventHandling = &#123;
-    data() &#123;
-        return &#123;
-            message: &#39;Hello Vue.js!&#39;
-        &#125;
-    &#125;,
-    methods: &#123;
-        reverseMessage() &#123;
-            this.message = this.message
-                .split(&#39;&#39;)
-                .reverse()
-                .join(&#39;&#39;)
-        &#125;
-    &#125;
-&#125;
-
-Vue.creatApp(EventHandling).mount(&#39;#event-handling&#39;)
-</code></pre>
+<h2 id="1-2-说说你对浏览器内核的理解"><a href="#1-2-说说你对浏览器内核的理解" class="headerlink" title="1.2.说说你对浏览器内核的理解"></a>1.2.说说你对浏览器内核的理解</h2><p>浏览器内核主要包括以下三个技术分支：</p>
 <ul>
-<li>Hello Vue.js!</li>
-<li>!sj.euV olleH</li>
+<li>排版渲染引擎：主要负责取得网页的内容（HTML、XML、图像等），整理信息，计算网页的显示方式，然后输出到显示器。</li>
+<li>JavaScript引擎：用来渲染js的，渲染的越快，动态网页加载的就越快。</li>
+<li>其他</li>
 </ul>
-<h3 id="条件与循环"><a href="#条件与循环" class="headerlink" title="条件与循环"></a>条件与循环</h3><p>控制切换一个元素是否显示也相当简单：</p>
-<h3 id="组件化应用构建"><a href="#组件化应用构建" class="headerlink" title="组件化应用构建"></a>组件化应用构建</h3><h2 id="应用-amp-组件实例"><a href="#应用-amp-组件实例" class="headerlink" title="应用 &amp; 组件实例"></a>应用 &amp; 组件实例</h2><h2 id="模板语法"><a href="#模板语法" class="headerlink" title="模板语法"></a>模板语法</h2><h1 id="深入组件"><a href="#深入组件" class="headerlink" title="深入组件"></a>深入组件</h1><h1 id="过渡-amp-动画"><a href="#过渡-amp-动画" class="headerlink" title="过渡 &amp; 动画"></a>过渡 &amp; 动画</h1><h1 id="可复用-amp-组合"><a href="#可复用-amp-组合" class="headerlink" title="可复用 &amp; 组合"></a>可复用 &amp; 组合</h1><h1 id="高阶指南"><a href="#高阶指南" class="headerlink" title="高阶指南"></a>高阶指南</h1><h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><h1 id="规模化"><a href="#规模化" class="headerlink" title="规模化"></a>规模化</h1><h1 id="无障碍"><a href="#无障碍" class="headerlink" title="无障碍"></a>无障碍</h1>
+<h2 id="1-3-一个页面从输入URL到页面加载显示完成，整个过程都发生了什么？"><a href="#1-3-一个页面从输入URL到页面加载显示完成，整个过程都发生了什么？" class="headerlink" title="1.3.一个页面从输入URL到页面加载显示完成，整个过程都发生了什么？"></a>1.3.一个页面从输入URL到页面加载显示完成，整个过程都发生了什么？</h2><ol>
+<li><p>浏览器根据请求的URL交给DNS域名解析，找到真实IP;</p>
+</li>
+<li><p>浏览器根据IP地址向服务器发送TCP连接，与浏览器建立TCP三次握手;<br>a.客户端向服务器发送一个建立连接的请求<br>b.</p>
+</li>
+</ol>
+<p>3.</p>
+<h2 id="1-4-浏览器缓存"><a href="#1-4-浏览器缓存" class="headerlink" title="1.4.浏览器缓存"></a>1.4.浏览器缓存</h2><h2 id="1-5-HTTP"><a href="#1-5-HTTP" class="headerlink" title="1.5.HTTP"></a>1.5.HTTP</h2><h1 id="2-HTML篇"><a href="#2-HTML篇" class="headerlink" title="2.HTML篇"></a>2.HTML篇</h1><h1 id="3-CSS篇"><a href="#3-CSS篇" class="headerlink" title="3.CSS篇"></a>3.CSS篇</h1><h1 id="4-JS篇"><a href="#4-JS篇" class="headerlink" title="4.JS篇"></a>4.JS篇</h1><h1 id="5-Vue篇"><a href="#5-Vue篇" class="headerlink" title="5.Vue篇"></a>5.Vue篇</h1><h1 id="6-前端安全问题"><a href="#6-前端安全问题" class="headerlink" title="6.前端安全问题"></a>6.前端安全问题</h1><h1 id="7-跨域"><a href="#7-跨域" class="headerlink" title="7.跨域"></a>7.跨域</h1><h1 id="8-性能优化"><a href="#8-性能优化" class="headerlink" title="8.性能优化"></a>8.性能优化</h1>
         </div>
         <!-- .entry-content -->
         <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent">
@@ -442,11 +406,30 @@ Vue.creatApp(EventHandling).mount(&#39;#event-handling&#39;)
       <div class="toc" style="background: none;"></div>
       <section class="post-squares nextprev">
         
+        
+        <div class="post-nepre half previous">
+          
+            <a href="/2021/08/20/vueNotes/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/13.png"
+                  style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)"
+                  src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/13.png">
+              </div>
+              <span class="label">
+                Previous Post</span>
+              <div class="info">
+                <h3>
+                  Vue学习笔记</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
           
           
-            <div class="post-nepre full next">
-              
-              <a href="/2021/08/19/hexo/" rel="next">
+          
+          <div class="post-nepre half next">
+            
+              <a href="/2021/08/20/hexo/" rel="next">
                 <div class="background">
                   <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/7.png"
                     style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"
@@ -818,7 +801,7 @@ Vue.creatApp(EventHandling).mount(&#39;#event-handling&#39;)
   </section>
   <div id="mo-nav" class="">
   <div class="m-avatar">
-    <img src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/10.jpg">
+    <img src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn/images/10.jpg">
   </div>
   <p
     style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">
@@ -883,7 +866,7 @@ Vue.creatApp(EventHandling).mount(&#39;#event-handling&#39;)
         <li>
           <a href="/categories/Essays">
             <i class="fa fa-commenting-o" aria-hidden="true"></i>
-            随想
+            随笔
           </a>
         </li>
         

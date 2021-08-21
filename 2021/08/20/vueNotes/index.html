@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">搭建Hexo博客 | SakuraGin の blog</title>
+  <title itemprop="name">Vue学习笔记 | SakuraGin の blog</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -48,7 +48,7 @@
   /*End of Initial Variables*/
   </script>
   <script type="text/javascript">
-  var bg = "https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/14.png,https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/7.png,https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/8.png,https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/10.png".split(",");
+  var bg = "https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/14.png,https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/7.png,https://cdn.jsdelivr.net/gh/Sakurayae2/cdn/images/16.png,https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/10.png,https://cdn.jsdelivr.net/gh/Sakurayae2/cdn/images/23.png".split(",");
   var bgindex = Math.floor(Math.random()*bg.length);
   if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
     alert('朋友，IE浏览器未适配哦~');
@@ -75,11 +75,11 @@
     <div class="focusinfo no-select">
       <div class="header-tou">
         <a href="https://sakurayae2.github.io">
-          <img src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/10.jpg">
+          <img src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn/images/10.jpg">
         </a>
       </div>
       <div class="header-info">
-        <p>种一棵树的最佳时间是十年前,其次是现在!</p>
+        <p>种一棵树的最佳时间是十年前,其次是现在！</p>
         <div class="top-social_v2">
           <li id="bg-pre">
             <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
@@ -89,7 +89,7 @@
               
                 <li>
                   <a href="https://github.com/Sakurayae2" target="_blank" class="social-github" title="github">
-                    <img src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/GitHub.png">
+                    <img src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn/images/GitHub.png">
                   </a>
                 </li>
               
@@ -97,7 +97,7 @@
               
                 <li>
                   <a href="https://space.bilibili.com/266986404" target="_blank" class="social-github" title="bilibili">
-                    <img src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/bilibili.png">
+                    <img src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn/images/bili.png">
                   </a>
                 </li>
               
@@ -105,7 +105,7 @@
               
                 <li>
                   <a href="https://music.163.com/#/my/m/music/playlist?id=887435773" target="_blank" class="social-github" title="wyy">
-                    <img src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/wangyiyun.png">
+                    <img src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn/images/wyy.jpg">
                   </a>
                 </li>
               
@@ -209,7 +209,7 @@
                       <li>
                         <a href="/categories/Essays">
                           <i class="fa fa-commenting-o" aria-hidden="true"></i>
-                          随想
+                          随笔
                         </a>
                       </li>
                     
@@ -334,12 +334,12 @@
 
 <div class="pattern-center single-center">
   <!-- 有配图默认渲染第一张 -->
-  <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/7.png);"
-    src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/7.png">
+  <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/13.png);"
+    src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/13.png">
   </div>
   <header class="pattern-header single-header">
     <h1 class="entry-title">
-      搭建Hexo博客</h1>
+      Vue学习笔记</h1>
     <p class="entry-census">
       <span>
         <a href="">
@@ -351,7 +351,7 @@
       </span>
       <span class="bull">
         ·</span>
-      2021-8-19<span class="bull">
+      2021-8-20<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
   </header>
@@ -366,80 +366,62 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 最近心血来潮花了点时间在网上到处搜刮资料搭建了这个博客，苦于肚子里没什么墨水儿也没有干货，就想着把这两天搭建这个博客的过程写下来，<del><em>水几篇文章（bushi）</em></del>， 是记录下来，怕到时侯换设备什么的忘了又得重头再来，顺便练习下 <em><font color="pink"> <a target="_blank" rel="noopener" href="https://markdown.com.cn/">markdown</a></em> </font> 语法。（这才是你真正的目的吧！）<br /><br>ps: 过程中有什么问题建议或者有什么纰漏都欢迎留言（当然了你没事儿逛逛也可以说点什么嘛），那什么第一次写文章有点。。。将就点看吧哈哈q(≧▽≦q)</p>
-</blockquote>
-<h2 id="1-前期准备"><a href="#1-前期准备" class="headerlink" title="1.前期准备"></a>1.前期准备</h2><h3 id="1-1-安装-Node"><a href="#1-1-安装-Node" class="headerlink" title="1.1.安装 Node"></a>1.1.安装 Node</h3><p>1.点击前往<a target="_blank" rel="noopener" href="https://nodejs.org/en/">Node官网</a>下载并安装;<br>然后验证下node是否安装成功,打开cmd输入以下内容:</p>
-<pre><code class="bash">#有版本信息就说明安装成功
-    node -v   #查看node版本
-    npm -v    #查看npm版本
+          <h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的 <strong><font color="red">渐进式</font></strong> 框架，所谓渐进式就是逐步实现新特性的意思，如实现模块化开发、路由、状态管理等新特性。其特点是综合了Angular (模块化)和React (虚拟DOM)的优点。<br>Vue被设计为可以 <strong><font color="blue">自底向上逐层应用</font></strong> ,Vue的核心库只关注 <strong><font color="yellowgreen">视图层</strong></font> ，不仅易于上手，还便于与第三方库(如: vue-router: 跳转，vue-resource: 通信，vuex:管理)或既有项目整合。</p>
+<h3 id="声明式渲染"><a href="#声明式渲染" class="headerlink" title="声明式渲染"></a>声明式渲染</h3><p>Vue.js的核心是一个允许采用简洁的模板语法来声明式地将数据渲染进DOM的系统：</p>
+<pre><code class="html">&lt;div id=&quot;counter&quot;&gt;
+    Counter: &#123;&#123; counter &#125;&#125;
+&lt;/div&gt;
 </code></pre>
-<p>2.npm换源,接着在cmd中输入:</p>
-<pre><code class="bash">#因为众所周知的原因,还是换个国内的管理工具快点
-    npm install -g cnpm --registry=https://registry.npm.taobao.org
-</code></pre>
-<p>再来验证下cnmp是否安装成功：</p>
-<pre><code class="bash">    cnpm -v
-</code></pre>
-<h3 id="1-2-安装-Hexo"><a href="#1-2-安装-Hexo" class="headerlink" title="1.2.安装 Hexo"></a>1.2.安装 Hexo</h3><p>还是在cmd中全局安装hexo:</p>
-<pre><code class="bash">    cnpm install -g hexo-cli
-</code></pre>
-<h2 id="2-创建博客"><a href="#2-创建博客" class="headerlink" title="2.创建博客"></a>2.创建博客</h2><h3 id="2-1-创建目录"><a href="#2-1-创建目录" class="headerlink" title="2.1.创建目录"></a>2.1.创建目录</h3><p>在D盘根目录下新建一个blog文件夹,然后cd进blog目录:</p>
-<pre><code class="bash">#你们可以随自己建文件,我这里就建在D盘根目录了
-    cd D:\
-    mkdir blog
-    cd \blog
-</code></pre>
-<h3 id="2-2-初始化"><a href="#2-2-初始化" class="headerlink" title="2.2.初始化"></a>2.2.初始化</h3><p>在刚建立的博客目录下,初始化你的博客:</p>
-<pre><code class="bash">    hexo init
-    #初始化后你的博客目录下应该已经有了一堆乱七八糟的东西，那恭喜你已经成功了一半
-</code></pre>
-<h3 id="2-3-启用服务"><a href="#2-3-启用服务" class="headerlink" title="2.3.启用服务"></a>2.3.启用服务</h3><p>启用本地博客服务:</p>
-<pre><code class="bash">    hexo s
-</code></pre>
-<p>打开浏览器,输入 <em><font color="red">localhost:4000</font></em> 即可在本地查看你的博客,默认写有一篇Hello World文章(万物皆从Hello World起)。</p>
-<h2 id="3-撰写博客"><a href="#3-撰写博客" class="headerlink" title="3.撰写博客"></a>3.撰写博客</h2><p>依旧是在博客目录下,cmd:</p>
-<pre><code class="bash">    hexo n &#39;我的第一篇博客文章&#39;   #名字随意
-</code></pre>
-<p>然后清理生成启动一条龙:</p>
-<pre><code class="bash">    hexo clean &amp;&amp; hexo g &amp;&amp; hexo s
-</code></pre>
-<p>回到浏览器,刷新即可看到新建的博客文章。</p>
-<h2 id="4-部署博客"><a href="#4-部署博客" class="headerlink" title="4.部署博客"></a>4.部署博客</h2><h3 id="4-1-新建仓库"><a href="#4-1-新建仓库" class="headerlink" title="4.1.新建仓库"></a>4.1.新建仓库</h3><p>登陆github,没有的话就注册一个,然后点击头像旁的 + 号,选择新建仓库(New repository),注意仓库名(Repository name)的固定写法是: 你的名字.github.io (比如我的就是 Sakurayae2.github.io),除了名字不一样外必须是这个格式,这就是你以后网站的地址</p>
-<h3 id="4-2-安装插件"><a href="#4-2-安装插件" class="headerlink" title="4.2.安装插件"></a>4.2.安装插件</h3><pre><code class="bash">    cnpm install --save hexo-deployer-git
-</code></pre>
-<h3 id="4-3-修改文件"><a href="#4-3-修改文件" class="headerlink" title="4.3.修改文件"></a>4.3.修改文件</h3><p>找到blog根目录下的 <em><font color="red">_config.yml</font></em> 文件,用记事本什么的打开,<br>拉到最底下,修改里面 <em><font color="red">#Deployment</em></font> 下的内容:</p>
-<pre><code class="bash">deploy:
-    type:&#39;git&#39;
-    repo: https://github.com/YourGithubName/YourGithubName.github.io.git  #你的仓库名称
-    branch: master  #不写默认创建master分支,而如果你master里面已经有内容了,也可以创建个别的分支(名字随意)
-</code></pre>
-<h3 id="4-4-部署"><a href="#4-4-部署" class="headerlink" title="4.4.部署"></a>4.4.部署</h3><p>回到cmd,输入:</p>
-<pre><code class="bash">    hexo d
-</code></pre>
-<p>打开浏览器,输入你的网站地址,如果你到这儿能看到博客内容(可能要刷新一会儿),那么恭喜你已经成功搭建了一个博客。</p>
-<p>当然即使失败了也不要紧,把目录删了重头再来就是,如果你遇到什么问题可以留言问我或者点击下方的链接去看这位大佬的视频教学(我也是看这个学的)</p>
-<h2 id="5-修改主题"><a href="#5-修改主题" class="headerlink" title="5.修改主题"></a>5.修改主题</h2><p>因为系统默认的主题太过朴素，都不能凸显出咱的个性对吧，所以换一个主题也很重要。（当然如果你就喜欢简单美那当我没说）</p>
-<h3 id="5-1-下载主题"><a href="#5-1-下载主题" class="headerlink" title="5.1.下载主题"></a>5.1.下载主题</h3><p>既然是更换主题那自然要有的换才行，可以去这儿 <em><a target="_blank" rel="noopener" href="https://hexo.io/themes/index.html">Themes | Hexo</a></em> 挑一个你喜欢的下载下来。当然这个网站里的主题并不都是给了下载地址的（你要F12硬扒那也行），所以我这儿给大伙儿推荐几款：</p>
-<h4 id="5-1-1-Next主题"><a href="#5-1-1-Next主题" class="headerlink" title="5.1.1.Next主题"></a>5.1.1.Next主题</h4><p>用的人较多<br><img src="https://pic3.zhimg.com/80/64ae4bd7d7ceed822dbf9ec14081d0e1_720w.jpg?source=1940ef5c" alt="效果图："></p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/iissnan/hexo-theme-next">next主题下载</a></li>
-</ul>
-<h4 id="5-1-2-yiliya主题"><a href="#5-1-2-yiliya主题" class="headerlink" title="5.1.2.yiliya主题"></a>5.1.2.yiliya主题</h4><p>简洁实用<br><img src="https://pic1.zhimg.com/57291a4ee84ce548460d5d226a52a2d8.jpg?source=1940ef5c" alt="效果图："></p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/litten/hexo-theme-yilia">yiliya主题下载</a></li>
-</ul>
-<h4 id="5-1-3-Matery主题"><a href="#5-1-3-Matery主题" class="headerlink" title="5.1.3.Matery主题"></a>5.1.3.Matery主题</h4><p>加载快速<br><img src="https://img-blog.csdnimg.cn/20190816091627682.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pnZDgyNjIzNzcxMA==,size_16,color_FFFFFF,t_70" alt="效果图："></p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery">matery主题下载</a></li>
-</ul>
-<h3 id="5-2-更改主题"><a href="#5-2-更改主题" class="headerlink" title="5.2.更改主题"></a>5.2.更改主题</h3><p>下载完成后，打开博客根目录下的 <em><font color="red">_config.yml</font></em> 文件，修改里面的 <em><font color="red">theme</font></em> （大概在100行），将默认的 <em><font color="red">landscape</font></em> 改为你下载的主题名即可。<br>接着打开cmd到博客根目录下执行：</p>
-<pre><code class="bash">    hexo clean &amp;&amp; hexo g &amp;&amp; hexo s
-    #此时打开浏览器，输入localhost:4000，刷新就可以看到效果了，如果本地浏览没问题，就可以推到远端上了
-    hexo d
-</code></pre>
-<h2 id="6-参考链接"><a href="#6-参考链接" class="headerlink" title="6.参考链接"></a>6.参考链接</h2><p>[bilibili][<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty?from=search&amp;seid=12937283690434882922%5D">https://www.bilibili.com/video/BV1Yb411a7ty?from=search&amp;seid=12937283690434882922]</a><br>[知乎][<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/24422335]">https://www.zhihu.com/question/24422335]</a></p>
+<pre><code class="javascript">#counter property每秒递增
 
+const Counter = &#123;
+    data() &#123;
+        return &#123;
+            Counter: 0
+        &#125;
+    &#125;,
+    mounted() &#123;
+        setInterval(() =&gt; &#123;
+            this.counter++
+        &#125;, 1000)
+    &#125;
+&#125;
+
+Vue.createApp(Counter).mount(&#39;#counter&#39;)
+</code></pre>
+<ul>
+<li>Counter: 0 (1,2,…)</li>
+</ul>
+<h3 id="处理用户输入"><a href="#处理用户输入" class="headerlink" title="处理用户输入"></a>处理用户输入</h3><p>为了让用户和应用进行交互，我们可以用 <em><strong><font color="red">v-on</font></strong></em> 指令添加一个事件监听器，通过它调用在实例中定义的方法：</p>
+<pre><code class="html">&lt;div id=&quot;event-handling&quot;&gt;
+    &lt;p&gt;&#123;&#123;message&#125;&#125;&lt;/p&gt;
+    &lt;button v-on:click=&quot;reverseMessage&quot;&gt;反转 message&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="javascript">const EventHandling = &#123;
+    data() &#123;
+        return &#123;
+            message: &#39;Hello Vue.js!&#39;
+        &#125;
+    &#125;,
+    methods: &#123;
+        reverseMessage() &#123;
+            this.message = this.message
+                .split(&#39;&#39;)
+                .reverse()
+                .join(&#39;&#39;)
+        &#125;
+    &#125;
+&#125;
+
+Vue.creatApp(EventHandling).mount(&#39;#event-handling&#39;)
+</code></pre>
+<ul>
+<li>Hello Vue.js!</li>
+<li>!sj.euV olleH</li>
+</ul>
+<h3 id="条件与循环"><a href="#条件与循环" class="headerlink" title="条件与循环"></a>条件与循环</h3><p>控制切换一个元素是否显示也相当简单：</p>
+<h3 id="组件化应用构建"><a href="#组件化应用构建" class="headerlink" title="组件化应用构建"></a>组件化应用构建</h3><h2 id="应用-amp-组件实例"><a href="#应用-amp-组件实例" class="headerlink" title="应用 &amp; 组件实例"></a>应用 &amp; 组件实例</h2><h2 id="模板语法"><a href="#模板语法" class="headerlink" title="模板语法"></a>模板语法</h2><h1 id="深入组件"><a href="#深入组件" class="headerlink" title="深入组件"></a>深入组件</h1><h1 id="过渡-amp-动画"><a href="#过渡-amp-动画" class="headerlink" title="过渡 &amp; 动画"></a>过渡 &amp; 动画</h1><h1 id="可复用-amp-组合"><a href="#可复用-amp-组合" class="headerlink" title="可复用 &amp; 组合"></a>可复用 &amp; 组合</h1><h1 id="高阶指南"><a href="#高阶指南" class="headerlink" title="高阶指南"></a>高阶指南</h1><h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><h1 id="规模化"><a href="#规模化" class="headerlink" title="规模化"></a>规模化</h1><h1 id="无障碍"><a href="#无障碍" class="headerlink" title="无障碍"></a>无障碍</h1>
         </div>
         <!-- .entry-content -->
         <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent">
@@ -461,25 +443,44 @@
       <section class="post-squares nextprev">
         
         
-          <div class="post-nepre full previous">
-            
-            <a href="/2021/08/20/test/" rel="prev">
+        <div class="post-nepre half previous">
+          
+            <a href="/2021/08/20/game/" rel="prev">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/13.png"
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://www.heishenhua.com/img/screenshot/blackmyth_wukong_screenshot_014.jpg"
                   style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)"
-                  src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/13.png">
+                  src="http://www.heishenhua.com/img/screenshot/blackmyth_wukong_screenshot_014.jpg">
               </div>
               <span class="label">
                 Previous Post</span>
               <div class="info">
                 <h3>
-                  Vue学习笔记</h3>
+                  《黑神话：悟空》</h3>
                 <hr>
               </div>
             </a>
           </div>
           
           
+          
+          <div class="post-nepre half next">
+            
+              <a href="/2021/08/20/interview/" rel="next">
+                <div class="background">
+                  <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/14.png"
+                    style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"
+                    onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/14.png">
+                </div>
+                <span class="label">
+                  Next Post</span>
+                <div class="info">
+                  <h3>
+                    前端面试题</h3>
+                  <hr>
+                </div>
+              </a>
+            </div>
+            
       </section>
       
 <div id="vcomments"></div>
@@ -836,7 +837,7 @@
   </section>
   <div id="mo-nav" class="">
   <div class="m-avatar">
-    <img src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/10.jpg">
+    <img src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn/images/10.jpg">
   </div>
   <p
     style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">
@@ -901,7 +902,7 @@
         <li>
           <a href="/categories/Essays">
             <i class="fa fa-commenting-o" aria-hidden="true"></i>
-            随想
+            随笔
           </a>
         </li>
         

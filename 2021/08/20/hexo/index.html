@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Tag: Vue | SakuraGin の blog</title>
+  <title itemprop="name">搭建Hexo博客 | SakuraGin の blog</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -328,65 +328,194 @@
   </div>
 </header>
 
-      
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 <div class="pattern-center-blank"></div>
-<div class="pattern-center ">
-  <div class="pattern-attachment-img">
-    <img src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/7.png" class="lazyload" onerror="imgError(this,3)"
-      style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+
+<div class="pattern-center single-center">
+  <!-- 有配图默认渲染第一张 -->
+  <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/7.png);"
+    src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/7.png">
   </div>
-  <header class="pattern-header ">
-    <h1 class="cat-title">Vue</h1>
+  <header class="pattern-header single-header">
+    <h1 class="entry-title">
+      搭建Hexo博客</h1>
+    <p class="entry-census">
+      <span>
+        <a href="">
+          <img src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/10.jpg" style="width: 35px;">
+        </a>
+      </span>
+      <span>
+        <a href=""></a>
+      </span>
+      <span class="bull">
+        ·</span>
+      2021-8-20<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
   </header>
 </div>
+
 <div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-      
-  <!-- 首页默认取最最新文章集 -->
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2021/08/20/vueNotes/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
+      <article id="post-1"
+        class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 最近心血来潮花了点时间在网上到处搜刮资料搭建了这个博客，苦于肚子里没什么墨水儿也没有干货，就想着把这两天搭建这个博客的过程写下来，<del><em>水几篇文章（bushi）</em></del>， 是记录下来，怕到时侯换设备什么的忘了又得重头再来，顺便练习下 <em><font color="pink"> <a target="_blank" rel="noopener" href="https://markdown.com.cn/">markdown</a></em> </font> 语法。（这才是你真正的目的吧！）<br /><br>ps: 过程中有什么问题建议或者有什么纰漏都欢迎留言（当然了你没事儿逛逛也可以说点什么嘛），那什么第一次写文章有点。。。将就点看吧哈哈q(≧▽≦q)</p>
+</blockquote>
+<h2 id="1-前期准备"><a href="#1-前期准备" class="headerlink" title="1.前期准备"></a>1.前期准备</h2><h3 id="1-1-安装-Node"><a href="#1-1-安装-Node" class="headerlink" title="1.1.安装 Node"></a>1.1.安装 Node</h3><p>1.点击前往<a target="_blank" rel="noopener" href="https://nodejs.org/en/">Node官网</a>下载并安装;<br>然后验证下node是否安装成功，打开cmd输入以下内容:</p>
+<pre><code class="cmd">#有版本信息就说明安装成功
+    node -v   #查看node版本
+    npm -v    #查看npm版本
+</code></pre>
+<p>2.npm换源，接着在cmd中输入:</p>
+<pre><code class="cmd">#因为众所周知的原因，还是换个国内的管理工具快点
+    npm install -g cnpm --registry=https://registry.npm.taobao.org
+</code></pre>
+<p>再来验证下cnmp是否安装成功：</p>
+<pre><code class="cmd">    cnpm -v
+</code></pre>
+<h3 id="1-2-安装-Hexo"><a href="#1-2-安装-Hexo" class="headerlink" title="1.2.安装 Hexo"></a>1.2.安装 Hexo</h3><p>还是在cmd中全局安装hexo:</p>
+<pre><code class="cmd">    cnpm install -g hexo-cli
+</code></pre>
+<h2 id="2-创建博客"><a href="#2-创建博客" class="headerlink" title="2.创建博客"></a>2.创建博客</h2><h3 id="2-1-创建目录"><a href="#2-1-创建目录" class="headerlink" title="2.1.创建目录"></a>2.1.创建目录</h3><p>在D盘根目录下新建一个blog文件夹，然后cd进blog目录:</p>
+<pre><code class="cmd">#随你自己建文件夹，我这里就建在D盘根目录了
+    cd D:\
+    mkdir blog
+    cd \blog
+</code></pre>
+<h3 id="2-2-初始化"><a href="#2-2-初始化" class="headerlink" title="2.2.初始化"></a>2.2.初始化</h3><p>在刚建立的博客目录下，初始化你的博客:</p>
+<pre><code class="cmd">    hexo init
+    #初始化后你的博客目录下应该已经有了一堆乱七八糟的东西，那恭喜你已经成功了一半！
+</code></pre>
+<h3 id="2-3-启用服务"><a href="#2-3-启用服务" class="headerlink" title="2.3.启用服务"></a>2.3.启用服务</h3><p>启用本地博客服务:</p>
+<pre><code class="cmd">    hexo s
+</code></pre>
+<p>打开浏览器，输入 <em><font color="red">localhost:4000</font></em> 即可在本地查看你的博客，默认写有一篇Hello World文章(万物皆从Hello World起)。</p>
+<h2 id="3-撰写博客"><a href="#3-撰写博客" class="headerlink" title="3.撰写博客"></a>3.撰写博客</h2><p>依旧是在博客目录下:</p>
+<pre><code class="cmd">    hexo n &#39;我的第一篇博客文章&#39;   #名字随意
+</code></pre>
+<p>然后清理生成启动一条龙:</p>
+<pre><code class="cmd">    hexo clean &amp;&amp; hexo g &amp;&amp; hexo s
+</code></pre>
+<p>回到浏览器，刷新即可看到新建的博客文章。</p>
+<h2 id="4-部署博客"><a href="#4-部署博客" class="headerlink" title="4.部署博客"></a>4.部署博客</h2><h3 id="4-1-新建仓库"><a href="#4-1-新建仓库" class="headerlink" title="4.1.新建仓库"></a>4.1.新建仓库</h3><p>登陆github，没有的话就注册一个，然后点击头像旁的 + 号，选择<strong>新建仓库</strong>(New repository)，注意<strong>仓库名</strong>(Repository name)的固定写法是: 你的名字.github.io (比如我的就是 Sakurayae2.github.io)，除了名字不一样外必须是这个格式，这就是你以后网站的地址</p>
+<h3 id="4-2-安装插件"><a href="#4-2-安装插件" class="headerlink" title="4.2.安装插件"></a>4.2.安装插件</h3><pre><code class="cmd">    cnpm install --save hexo-deployer-git
+</code></pre>
+<h3 id="4-3-修改文件"><a href="#4-3-修改文件" class="headerlink" title="4.3.修改文件"></a>4.3.修改文件</h3><p>找到blog根目录下的 <em><font color="red">_config.yml</font></em> 文件，用记事本什么的打开,<br>拉到最底下，修改里面 <em><font color="red">#Deployment</em></font> 下的内容:</p>
+<pre><code class="cmd">deploy:
+    type:&#39;git&#39;
+    repo: https://github.com/YourGithubName/YourGithubName.github.io.git  #你的仓库名称
+    branch: master  #不写默认创建master分支，而如果你master里面已经有内容了，也可以创建个别的分支(名字随意)
+</code></pre>
+<h3 id="4-4-部署"><a href="#4-4-部署" class="headerlink" title="4.4.部署"></a>4.4.部署</h3><p>回到cmd,输入:</p>
+<pre><code class="cmd">    hexo d
+</code></pre>
+<p>打开浏览器，输入你的网站地址，如果你到这儿能看到博客内容(可能要刷新一会儿)，那么恭喜你已经成功搭建了一个博客！</p>
+<p>当然即使失败了也不要紧，把目录删了重头再来就是，如果你遇到什么问题可以留言问我或者点击下方的链接去看这位大佬的视频教学(我也是看这个学的)</p>
+<h2 id="5-修改主题"><a href="#5-修改主题" class="headerlink" title="5.修改主题"></a>5.修改主题</h2><p>因为系统默认的主题太过朴素，都不能凸显出咱的个性对吧，所以换一个主题也很重要。（当然如果你就喜欢这种简约风那当我没说）</p>
+<h3 id="5-1-下载主题"><a href="#5-1-下载主题" class="headerlink" title="5.1.下载主题"></a>5.1.下载主题</h3><p>既然是更换主题那自然要有的换才行，可以去这儿 <em><a target="_blank" rel="noopener" href="https://hexo.io/themes/index.html">Themes | Hexo</a></em> 挑一个你喜欢的下载下来。当然这个网站里的主题并不都是给了下载地址的（你要F12硬扒那也行），所以我这儿给大伙儿推荐几款：</p>
+<h4 id="5-1-1-Next主题"><a href="#5-1-1-Next主题" class="headerlink" title="5.1.1.Next主题"></a>5.1.1.Next主题</h4><p>用的人较多<br><img src="https://pic3.zhimg.com/80/64ae4bd7d7ceed822dbf9ec14081d0e1_720w.jpg?source=1940ef5c" alt="效果图："></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/iissnan/hexo-theme-next">next主题下载</a></li>
+</ul>
+<h4 id="5-1-2-yiliya主题"><a href="#5-1-2-yiliya主题" class="headerlink" title="5.1.2.yiliya主题"></a>5.1.2.yiliya主题</h4><p>简洁实用<br><img src="https://pic1.zhimg.com/57291a4ee84ce548460d5d226a52a2d8.jpg?source=1940ef5c" alt="效果图："></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/litten/hexo-theme-yilia">yiliya主题下载</a></li>
+</ul>
+<h4 id="5-1-3-Matery主题"><a href="#5-1-3-Matery主题" class="headerlink" title="5.1.3.Matery主题"></a>5.1.3.Matery主题</h4><p>加载快速<br><img src="https://img-blog.csdnimg.cn/20190816091627682.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pnZDgyNjIzNzcxMA==,size_16,color_FFFFFF,t_70" alt="效果图："></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery">matery主题下载</a></li>
+</ul>
+<h3 id="5-2-更改主题"><a href="#5-2-更改主题" class="headerlink" title="5.2.更改主题"></a>5.2.更改主题</h3><p>下载完成后，打开博客根目录下的 <em><font color="red">_config.yml</font></em> 文件，修改里面的 <em><font color="red">theme</font></em> （大概在100行），将默认的 <em><font color="red">landscape</font></em> 改为你下载的主题名即可。<br>接着还是打开cmd到博客根目录下执行：</p>
+<pre><code class="cmd">    hexo clean &amp;&amp; hexo g &amp;&amp; hexo s
+    #此时打开浏览器，输入localhost:4000，刷新就可以看到效果了，如果本地浏览没问题，就可以推到远端上了
+    hexo d
+</code></pre>
+<h2 id="6-参考链接"><a href="#6-参考链接" class="headerlink" title="6.参考链接"></a>6.参考链接</h2><p>[bilibili][<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty?from=search&amp;seid=12937283690434882922%5D">https://www.bilibili.com/video/BV1Yb411a7ty?from=search&amp;seid=12937283690434882922]</a><br>[知乎][<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/24422335]">https://www.zhihu.com/question/24422335]</a></p>
+
         </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/13.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2021/08/20/vueNotes/">
-    Vue学习笔记</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2021-8-20</div>
-    <p>
-    记录一下学习Vue.js的过程，持续更新ing</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2021/08/20/vueNotes/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
+        <!-- .entry-content -->
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent">
+        </div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"
+              target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i>
+              知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          <div class="post-nepre full previous">
+            
+            <a href="/2021/08/20/interview/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/14.png"
+                  style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)"
+                  src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/14.png">
+              </div>
+              <span class="label">
+                Previous Post</span>
+              <div class="info">
+                <h3>
+                  前端面试题</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+          
+          
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function () {
+    var valine = new Valine();
+    valine.init({
+      el: '#vcomments',
+      appId: "dSHPYXy9adbojPN5pf5KB6qs-gzGzoHsz",
+      appKey: "8Ai3FqvbiSM2syUHwLyVsRfW",
+      path: window.location.pathname,
+      placeholder: "欢迎各位留下宝贵的评论,但还请文明发言哈!"
+    })
+  }
+</script>
 
-
-      <div class="clearer">
-      </div>
-    </main>
-    <!--  -->
-    
-  </div>
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="" class="profile gravatar"><img
+              src="https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/10.jpg" itemprop="image"
+              alt="" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">SakuraGin</span>
+            <h3 itemprop="name">
+              <a href="" itemprop="url" rel="author"></a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>种一棵树的最佳时间是十年前，其次是现在！</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
+
+
     </div>
     <div class="ins-search">
     <div class="ins-search-mask"></div>
