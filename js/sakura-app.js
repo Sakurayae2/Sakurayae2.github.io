@@ -1105,7 +1105,7 @@ var home = location.href,
           appId: mashiro_option.v_appId,
           appKey: mashiro_option.v_appKey,
           path: window.location.pathname,
-          placeholder: '你是我一生只会遇见一次的惊喜 ...'
+          placeholder: '来都来了，真的不说点什么就走吗？点击此处留下你的宝贵评论吧~'
         })
       }
     },

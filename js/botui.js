@@ -111,7 +111,7 @@ function bot_ui_ini() {
                 botui.action.button({
                     delay: 1500,
                     action: [{
-                        text: "为什么是白猫呢？ 🤔",
+                        text: "为什么用GitHub呢？ 🤔",
                         value: "why-cat"
                     }]
                 }).then(function (a) {
@@ -126,7 +126,7 @@ function bot_ui_ini() {
             }).then(function () {
                 botui.message.add({
                     delay: 1100,
-                    content: "而且谁不喜欢猫呢！"
+                    content: "而且谁不喜欢同性交友呢！"
                 }).then(function () {
                     botui.action.button({
                         delay: 1500,
@@ -143,7 +143,7 @@ function bot_ui_ini() {
         fifthpart = function () {
             botui.message.add({
                 delay: 1E3,
-                content: "emmmm，没钱买不起。。"
+                content: "emmmm，没钱买不起域名..."
             }).then(function () {
                 botui.message.add({
                     delay: 1600,

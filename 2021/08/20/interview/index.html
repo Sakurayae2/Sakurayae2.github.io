@@ -379,13 +379,48 @@
 <li>其他</li>
 </ul>
 <h2 id="1-3-一个页面从输入URL到页面加载显示完成，整个过程都发生了什么？"><a href="#1-3-一个页面从输入URL到页面加载显示完成，整个过程都发生了什么？" class="headerlink" title="1.3.一个页面从输入URL到页面加载显示完成，整个过程都发生了什么？"></a>1.3.一个页面从输入URL到页面加载显示完成，整个过程都发生了什么？</h2><ol>
-<li><p>浏览器根据请求的URL交给DNS域名解析，找到真实IP;</p>
-</li>
-<li><p>浏览器根据IP地址向服务器发送TCP连接，与浏览器建立TCP三次握手;<br>a.客户端向服务器发送一个建立连接的请求<br>b.</p>
-</li>
+<li>浏览器根据请求的URL交给DNS域名解析，找到真实IP;</li>
+<li>浏览器根据IP地址向服务器发送TCP连接，与浏览器建立TCP三次握手：<br>a.客户端向服务器发送一个建立连接的请求；<br>b.服务器接到请求后发送同意连接的信号；<br>c.客户端接到同意连接的信号后，再次向服务器发送确认信号，然后客户端与服务器的连接建立成功。</li>
+<li>浏览器发送HTTP请求<br>浏览器根据URL内容生成HTTP请求，请求中包含请求文件的位置，请求文件的方式等等；</li>
+<li>服务器处理请求并返回HTTP报文（HTTP响应报文也是由三部分组成：状态码，响应报头和响应报文）：<br>a.服务器接到请求后，会根据HTTP请求中的内容来决定如何获取相应的HTML文件；<br>b.服务器将得到的HTML文件发送给浏览器；<br>c.在浏览器还没有完全接收HTML文件时便开始渲染，显示网页；<br>d.在执行HTML中代码时，根据需要，浏览器会继续请求图片、CSS、JS等文件，过程同请求HTML。</li>
+<li>断开连接</li>
 </ol>
-<p>3.</p>
-<h2 id="1-4-浏览器缓存"><a href="#1-4-浏览器缓存" class="headerlink" title="1.4.浏览器缓存"></a>1.4.浏览器缓存</h2><h2 id="1-5-HTTP"><a href="#1-5-HTTP" class="headerlink" title="1.5.HTTP"></a>1.5.HTTP</h2><h1 id="2-HTML篇"><a href="#2-HTML篇" class="headerlink" title="2.HTML篇"></a>2.HTML篇</h1><h1 id="3-CSS篇"><a href="#3-CSS篇" class="headerlink" title="3.CSS篇"></a>3.CSS篇</h1><h1 id="4-JS篇"><a href="#4-JS篇" class="headerlink" title="4.JS篇"></a>4.JS篇</h1><h1 id="5-Vue篇"><a href="#5-Vue篇" class="headerlink" title="5.Vue篇"></a>5.Vue篇</h1><h1 id="6-前端安全问题"><a href="#6-前端安全问题" class="headerlink" title="6.前端安全问题"></a>6.前端安全问题</h1><h1 id="7-跨域"><a href="#7-跨域" class="headerlink" title="7.跨域"></a>7.跨域</h1><h1 id="8-性能优化"><a href="#8-性能优化" class="headerlink" title="8.性能优化"></a>8.性能优化</h1>
+<h2 id="1-4-浏览器缓存"><a href="#1-4-浏览器缓存" class="headerlink" title="1.4.浏览器缓存"></a>1.4.浏览器缓存</h2><p>1.sessionStorage<br>优点：可以临时存储，关闭页面标签自动回收，不支持跨页面交互；<br>缺点：只能作为临时存储，不能存储长久化。<br>2.localStorage<br>优点：用于长久保存整个网站的数据，保存的数据没有过期时间，直到手动删除；<br>缺点：存在大小限制，IE8以上支持；目前所有的浏览器都会把localStorage的值的类型限定为String类型，这个在我们日常的JSON对象类型需要一些转换。<br>3.cookie<br>优点：兼容性最好，几乎所有浏览器都支持；<br>缺点：大小有限制，而且每次发送请求，请求头里会带着cookie一起发过去，现在基本上大多数登陆的合法性验证都是用cookie来验证的。<br>4.userData<br>优点：出现的时间比sessionStorage要早；<br>缺点：IE专门的存储方式，存储大小有限制，单个文件的大小限制是128kb，一个域名下总共可以保存1024kb的文件，文件个数应该没有限制。在受限站点里这两个值分别为64kb和640kb。</p>
+<h2 id="1-5-HTTP"><a href="#1-5-HTTP" class="headerlink" title="1.5.HTTP"></a>1.5.HTTP</h2><h3 id="1-5-1-HTTP状态码"><a href="#1-5-1-HTTP状态码" class="headerlink" title="1.5.1.HTTP状态码"></a>1.5.1.HTTP状态码</h3><p>以 2xx 开头的都表示为请求成功响应<br>状态码含义：</p>
+<ul>
+<li><strong>200</strong> 请求成功</li>
+<li><strong>204</strong> 请求处理成功，但是没有资源可以返回</li>
+<li><strong>206</strong> 对资源某一部分进行响应，由Content-Range指定范围的实体内容</li>
+</ul>
+<p>以 3xx 开头的都表示需要进行附加操作以完成请求<br>状态码含义：</p>
+<ul>
+<li><strong>301</strong> 永久性重定向，该状态码表示请求的资源已经重新分配URL，以后应该使用资源现有的URL</li>
+<li><strong>302</strong> 临时性重定向，该状态码表示请求的资源已被分配了新的URL，希望用户（本次）能使用新的URL访问 </li>
+<li><strong>303</strong> 该状态码表示由于请求对应的资源存在着另一个URL，应使用GET方法定向获取请求的资源</li>
+<li><strong>304</strong> 该状态码表示客户端发送附带条件的请求时，服务器端允许请求访问资源，但未满足条件的情况</li>
+<li><strong>307</strong> 临时重定向，与302 Found有着相同的含义</li>
+</ul>
+<p>以 4xx 开头的表示客户端是发送错误的原因所在<br>状态码含义：</p>
+<ul>
+<li><strong>400</strong> 表示请求报文中存在语法错误，当错误发生时，需修改请求的内容后再发送请求</li>
+<li><strong>401</strong> 表示发送的请求需要通过HTTP认证（BASIC认证，DIGEST认证）的认证信息</li>
+<li><strong>403</strong> 表示对请求资源的访问被服务器拒绝了</li>
+<li><strong>404</strong> 表示服务器上无法找到请求的资源</li>
+</ul>
+<p>以 5xx 开头的响应标头表示服务器本身发生错误<br>状态码含义：</p>
+<ul>
+<li><strong>500</strong> 表示服务器在执行请求时发生了错误</li>
+<li><strong>503</strong> 表示服务器暂时处于超负载或者正在停机维护，现在无法处理请求</li>
+</ul>
+<h3 id="1-5-2-URL和URI有什么区别？"><a href="#1-5-2-URL和URI有什么区别？" class="headerlink" title="1.5.2.URL和URI有什么区别？"></a>1.5.2.URL和URI有什么区别？</h3><p>URI是统一资源标识符，相当于身份证号码；<br>Web上可用的每种资源如HTML文档、图像、视频、程序都是URI来定位的；<br>URI一般由三部分组成：<br>1.访问资源的命名机制<br>2.存放资源的主机名<br>3.资源本身的名称，由路径表示，相当于家庭住址</p>
+<p>URL是Internet上用来描述信息资源的字符串，主要用在各种WWW客户程序和服务器程序上，特别是著名的Mosaic。利用URL可以用一种统一的格式来描述各种信息资源，包括文件，服务器的地址和目录等。<br>URL一般由三部分组成：<br>1.协议（或称服务方式）<br>2.存有该资源的主机地址（有时也包括端口号）<br>3.主机资源的具体地址（如目录，文件名等）</p>
+<h3 id="1-5-3-HTTP和HTTPS的区别"><a href="#1-5-3-HTTP和HTTPS的区别" class="headerlink" title="1.5.3.HTTP和HTTPS的区别"></a>1.5.3.HTTP和HTTPS的区别</h3><ul>
+<li>HTTPS协议需要到CA（Certificate Authority，证书颁发机构）申请证书，一般免费证书少，因而需要一定费用。</li>
+<li>HTTP是超文本传输协议，信息是明文传输，HTTPS则是具有安全性的SSL加密传输协议。</li>
+<li>HTTP和HTTPS使用的是完全不同的连接方式，用的端口也不一样，前者是80，后者是443.</li>
+<li>HTTP的连接很简单，是无状态的；HTTPS协议是由SSL+HTTP协议构建的可进行加密传输，身份认证的网络协议，比HTTP协议安全（无状态的意思是将其数据包的发送、传输和接收都是相互独立的；无连接的意思是指通信双方都不长久的维持对方的任何信息。）</li>
+</ul>
+<h1 id="2-HTML篇"><a href="#2-HTML篇" class="headerlink" title="2.HTML篇"></a>2.HTML篇</h1><h1 id="3-CSS篇"><a href="#3-CSS篇" class="headerlink" title="3.CSS篇"></a>3.CSS篇</h1><h1 id="4-JS篇"><a href="#4-JS篇" class="headerlink" title="4.JS篇"></a>4.JS篇</h1><h1 id="5-Vue篇"><a href="#5-Vue篇" class="headerlink" title="5.Vue篇"></a>5.Vue篇</h1><h1 id="6-前端安全问题"><a href="#6-前端安全问题" class="headerlink" title="6.前端安全问题"></a>6.前端安全问题</h1><h1 id="7-跨域"><a href="#7-跨域" class="headerlink" title="7.跨域"></a>7.跨域</h1><h1 id="8-性能优化"><a href="#8-性能优化" class="headerlink" title="8.性能优化"></a>8.性能优化</h1>
         </div>
         <!-- .entry-content -->
         <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent">
@@ -456,7 +491,7 @@
       appId: "dSHPYXy9adbojPN5pf5KB6qs-gzGzoHsz",
       appKey: "8Ai3FqvbiSM2syUHwLyVsRfW",
       path: window.location.pathname,
-      placeholder: "欢迎各位留下宝贵的评论,但还请文明发言哈!"
+      placeholder: "来都来了，真的不说点什么就走吗？点击此处留下你的宝贵评论吧~"
     })
   }
 </script>
