@@ -48,7 +48,7 @@
   /*End of Initial Variables*/
   </script>
   <script type="text/javascript">
-  var bg = "https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/14.png,https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/7.png,https://cdn.jsdelivr.net/gh/Sakurayae2/cdn/images/16.png,https://cdn.jsdelivr.net/gh/Sakurayae2/cdn@1.07/images/10.png,https://cdn.jsdelivr.net/gh/Sakurayae2/cdn/images/23.png".split(",");
+  var bg = "https://cdn.jsdelivr.net/gh/Sakurayae2/cdn/images/14.png,https://cdn.jsdelivr.net/gh/Sakurayae2/cdn/images/7.png,https://cdn.jsdelivr.net/gh/Sakurayae2/cdn/images/10.png,https://cdn.jsdelivr.net/gh/Sakurayae2/cdn/images/23.png".split(",");
   var bgindex = Math.floor(Math.random()*bg.length);
   if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
     alert('朋友，IE浏览器未适配哦~');
@@ -350,7 +350,7 @@
     <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
   <div class="post-entry">
     <div class="feature">
-      <a href="/2021/09/01/myBlog/">
+      <a href="/2021/09/09/sort/">
         <div class="overlay">
           <i class="iconfont icon-text">
           </i>
@@ -359,18 +359,18 @@
       </a>
     </div>
     <h1 class="entry-title">
-    <a href="/2021/09/01/myBlog/">
-    手撸博客</a>
+    <a href="/2021/09/09/sort/">
+    排序算法</a>
     </h1>
     <div class="p-time">
       <i class="iconfont icon-time">
       </i>
-    2021-9-1</div>
+    2021-9-9</div>
     <p>
-    诶技术不到位，还没开始呢，不用看了</p>
+    排序算法</p>
     <footer class="entry-footer">
       <div class="post-more">
-        <a href="/2021/09/01/myBlog/">
+        <a href="/2021/09/09/sort/">
           <i class="iconfont icon-caidan">
           </i>
         </a>
@@ -428,7 +428,7 @@
     <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
   <div class="post-entry">
     <div class="feature">
-      <a href="/2021/09/01/myBlog/">
+      <a href="/2021/09/09/sort/">
         <div class="overlay">
           <i class="iconfont icon-text">
           </i>
@@ -437,18 +437,18 @@
       </a>
     </div>
     <h1 class="entry-title">
-    <a href="/2021/09/01/myBlog/">
-    手撸博客</a>
+    <a href="/2021/09/09/sort/">
+    排序算法</a>
     </h1>
     <div class="p-time">
       <i class="iconfont icon-time">
       </i>
-    2021-9-1</div>
+    2021-9-9</div>
     <p>
-    诶技术不到位，还没开始呢，不用看了</p>
+    排序算法</p>
     <footer class="entry-footer">
       <div class="post-more">
-        <a href="/2021/09/01/myBlog/">
+        <a href="/2021/09/09/sort/">
           <i class="iconfont icon-caidan">
           </i>
         </a>
@@ -498,7 +498,7 @@
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="ins-section-wrapper">
@@ -510,10 +510,10 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Posts',
-            // PAGES: 'Pages',
-            CATEGORIES: 'Categories',
-            TAGS: 'Tags',
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
         },
         ROOT_URL: '/',
         CONTENT_URL: '/content.json',
@@ -1060,19 +1060,31 @@
   });
 </script>
 
-
-  <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/love.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/js/hititle.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/piao.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/sakura.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/gh/Natsuki-Kaede/Blog-Resources@master/live2d/autoload.js"></script>
-  <script src="//cdn.jsdelivr.net/gh/Natsuki-Kaede/Fly-Engine@latest/fly-engine.js" type="module"></script>
-
   <script src="//instant.page/3.0.0" type="module" defer
     integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/love.js"></script>
+  <script>
+    var OriginTitle = document.title;
+    var titleTime;
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) {
+        $('[rel="icon"]').attr('href', "/img/trhx2.png");
+        document.title = 'ヽ(●-`Д´-)ノ 看官别走啊！';
+        clearTimeout(titleTime);
+      } else {
+        $('[rel="icon"]').attr('href', "/img/trhx2.png");
+        document.title = 'ヾ(Ő∀Ő3)ノ 谢谢你回来！' + OriginTitle;
+        titleTime = setTimeout(function () {
+          document.title = OriginTitle;
+        }, 2000);
+      }
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/gh/Natsuki-Kaede/Blog-Resources@master/live2d/autoload.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/Natsuki-Kaede/Fly-Engine@latest/fly-engine.js" type="module"></script>
+  <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/piao.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/sakura.js"></script>
+
 </body>
 
 </html>
