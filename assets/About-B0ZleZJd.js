@@ -1,0 +1,1 @@
+import{n as e,r as t,s as n,t as r}from"./index-C6QhBSdn.js";var i={};function a(r,i){return n(),t(`div`,null,[...i[0]||=[e(`h1`,null,`关于我`,-1)]])}var o=r(i,[[`render`,a]]);export{o as default};
